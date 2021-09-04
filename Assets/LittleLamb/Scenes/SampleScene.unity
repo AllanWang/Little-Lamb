@@ -425,7 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobbyPanel: {fileID: 40919614}
   ipAddress: 127.0.0.1
-  lobbyCamera: {fileID: 0}
+  lobbyCamera: {fileID: 963194227}
 --- !u!114 &278772318
 MonoBehaviour:
   m_ObjectHideFlags: 0
