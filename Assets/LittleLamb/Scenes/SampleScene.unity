@@ -376,7 +376,7 @@ MonoBehaviour:
     00000000:
       type: {class: NullableBoolSerializable, ns: MLAPI.Configuration, asm: Unity.Multiplayer.MLAPI.Runtime}
       data:
-        Value: 0
+        Value: 1897319656204293034
 --- !u!4 &223974229
 Transform:
   m_ObjectHideFlags: 0
@@ -425,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobbyPanel: {fileID: 40919614}
   ipAddress: 127.0.0.1
+  lobbyCamera: {fileID: 0}
 --- !u!114 &278772318
 MonoBehaviour:
   m_ObjectHideFlags: 0
