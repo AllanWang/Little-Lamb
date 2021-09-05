@@ -1,0 +1,6 @@
+.git\
+.vscode\
+Library\
+Temp\
+Builds\
+stdout.log
