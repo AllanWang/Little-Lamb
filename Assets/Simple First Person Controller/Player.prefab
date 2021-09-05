@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 2699541615817244670}
   - component: {fileID: 8650592294318684182}
   - component: {fileID: 1655769006760426856}
+  - component: {fileID: -3278975289298802937}
   - component: {fileID: 6706695121101722077}
   - component: {fileID: 3032855028237874931}
   m_Layer: 0
@@ -331,6 +332,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTrail: {fileID: 5598875209517570613, guid: 077eb7fcc007bf24bb0edc43cd40a390, type: 3}
   gunBarrel: {fileID: 3228435429295927374}
+--- !u!114 &-3278975289298802937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699541615817244657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cfe0636bb350374e8e32f5f721dc724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scripts:
+  - {fileID: 2699541615817244670}
+  - {fileID: 8650592294318684182}
+  - {fileID: 1655769006760426856}
+  - {fileID: 3032855028237874931}
 --- !u!114 &6706695121101722077
 MonoBehaviour:
   m_ObjectHideFlags: 0
