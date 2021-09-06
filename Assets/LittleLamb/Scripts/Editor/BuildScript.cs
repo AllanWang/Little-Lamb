@@ -10,8 +10,9 @@ public class BuildScript
   [MenuItem("Build/Build All")]
   public static void BuildAll()
   {
-    BuildWindowsServer();
+    // BuildWindowsServer();
     BuildWindowsClient();
+    BuildOSXClient();
   }
 
   [MenuItem("Build/Build Server (Windows)")]
@@ -40,5 +41,19 @@ public class BuildScript
     Console.WriteLine("Building Client (Windows)");
     BuildPipeline.BuildPlayer(buildPlayerOptions);
     Console.WriteLine("Built Client (Windows)");
+  }
+
+  [MenuItem("Build/Build Client (OSX)")]
+  public static void BuildOSXClient()
+  {
+    BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
+    buildPlayerOptions.scenes = new[] { "Assets/LittleLamb/Scenes/SampleScene.unity" };
+    buildPlayerOptions.locationPathName = "Builds/OSX/Client.app";
+    buildPlayerOptions.target = BuildTarget.StandaloneOSX;
+    buildPlayerOptions.options = BuildOptions.CompressWithLz4HC;
+
+    Console.WriteLine("Building Client (OSX)");
+    BuildPipeline.BuildPlayer(buildPlayerOptions);
+    Console.WriteLine("Built Client (OSX)");
   }
 }

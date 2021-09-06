@@ -11,10 +11,6 @@ public class ConnectionManager : MonoBehaviour
   public GameObject lobbyPanel;
   private Logger logger = new Logger(new LoggerHandler());
 
-  public string ipAddress = "127.0.0.1";
-
-  UNetTransport transport;
-
   public Camera lobbyCamera;
   public void Host()
   {
@@ -27,8 +23,6 @@ public class ConnectionManager : MonoBehaviour
 
   public void Join()
   {
-    transport = NetworkManager.Singleton.GetComponent<UNetTransport>();
-    transport.ConnectAddress = ipAddress;
     logger.Log("Join");
     lobbyPanel.SetActive(false);
     lobbyCamera.gameObject.SetActive(false);
@@ -51,8 +45,4 @@ public class ConnectionManager : MonoBehaviour
     return new Vector3(x, y, z);
   }
 
-  public void IpAddressChanged(string ipAddress)
-  {
-    this.ipAddress = ipAddress;
-  }
 }
