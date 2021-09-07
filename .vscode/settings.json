@@ -50,5 +50,6 @@
       "ProjectSettings/": true,
       "Temp/": true
     },
-    "search.useIgnoreFiles": false
+    "search.useIgnoreFiles": false,
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)"
 }

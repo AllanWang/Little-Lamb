@@ -31,10 +31,17 @@ namespace LittleLamb.Player
 
     private bool bufferedJump = false;
 
+    private int animGroundVelocity;
+    private int animYVelocity;
+    private int animIsGrounded;
+
     void Start()
     {
       controller = GetComponent<CharacterController>();
       anim = gameObject.GetComponentInChildren<Animator>();
+      animGroundVelocity = Animator.StringToHash("GroundVelocity");
+      animYVelocity = Animator.StringToHash("YVelocity");
+      animIsGrounded = Animator.StringToHash("IsGrounded");
     }
 
     void Update()
@@ -93,11 +100,15 @@ namespace LittleLamb.Player
         {
           yVelocity = jumpSpeed;
           bufferedJump = false;
-          // anim.SetFloat("Velocity", 0f); // TODO add jump animation?
         }
       }
 
       yVelocity -= gravity * Time.deltaTime;
+
+      // Check jump animation
+      anim.SetFloat(animYVelocity, yVelocity);
+      anim.SetBool(animIsGrounded, controller.isGrounded);
+
 
       // Not jumping
       if (controller.isGrounded && yVelocity <= 0)
@@ -105,10 +116,10 @@ namespace LittleLamb.Player
         // Not moving
         if (movement.magnitude <= 0)
         {
-          anim.SetFloat("Velocity", 0f, 0.1f, Time.deltaTime);
+          anim.SetFloat(animGroundVelocity, 0f, 0.1f, Time.deltaTime);
           return;
         }
-        anim.SetFloat("Velocity", isRunning ? 1f : 0.5f, 0.2f, Time.deltaTime);
+        anim.SetFloat(animGroundVelocity, isRunning ? 1f : 0.5f, 0.2f, Time.deltaTime);
       }
 
       movement.y = yVelocity;
