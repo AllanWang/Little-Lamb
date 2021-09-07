@@ -7,6 +7,7 @@ namespace LittleLamb.Player
   public class Player : MonoBehaviour
   {
     private Animator anim;
+
     private CharacterController controller;
 
     [Range(1f, 20f)]
@@ -87,22 +88,26 @@ namespace LittleLamb.Player
         {
           yVelocity = jumpSpeed;
           bufferedJump = false;
+          // anim.SetFloat("Velocity", 0f); // TODO add jump animation?
         }
       }
 
       yVelocity -= gravity * Time.deltaTime;
 
-      // Check if moving prior to adding yVelocity
-      if (movement.magnitude <= 0 && controller.isGrounded && yVelocity <= 0)
+      // Not jumping
+      if (controller.isGrounded && yVelocity <= 0)
       {
-        anim.SetInteger("AnimationPar", 0);
-        return;
+        // Not moving
+        if (movement.magnitude <= 0)
+        {
+          anim.SetFloat("Velocity", 0f, 0.1f, Time.deltaTime);
+          return;
+        }
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        anim.SetFloat("Velocity", isRunning ? 1f : 0.5f, 0.2f, Time.deltaTime);
       }
 
       movement.y = yVelocity;
-
-      anim.SetInteger("AnimationPar", 1);
-
       controller.Move(movement * Time.deltaTime);
 
     }
