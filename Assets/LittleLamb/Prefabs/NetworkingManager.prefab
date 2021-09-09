@@ -124,6 +124,7 @@ MonoBehaviour:
     NetworkTransport: {fileID: 801728589883787011}
     RegisteredScenes:
     - Preloader
+    - Startup
     AllowRuntimeSceneChanges: 0
     NetworkPrefabs: []
     PlayerPrefabHash:
