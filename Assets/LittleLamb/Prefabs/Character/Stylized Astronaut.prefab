@@ -414,6 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2941404196733893667}
+  - component: {fileID: 1166189948380915886}
   - component: {fileID: 2993884574283407401}
   - component: {fileID: 2964377377634013049}
   - component: {fileID: 7426940822347820362}
@@ -440,6 +441,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166189948380915886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943891891021508573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NetworkInstanceId: 0
+  PrefabHash: 12816768390216975912
+  PrefabHashGenerator: Stylized Astronaut
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
 --- !u!95 &2993884574283407401
 Animator:
   serializedVersion: 3
@@ -490,6 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  sprintSpeed: 7
   jumpSpeed: 10
   turnSpeed: 400
   gravity: 20

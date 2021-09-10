@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 370139659}
   m_Layer: 0
   m_Name: GameHub
-  m_TagString: Untagged
+  m_TagString: GameNetPortal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,6 +251,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &494323569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494323571}
+  - component: {fileID: 494323570}
+  m_Layer: 0
+  m_Name: StartupRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &494323570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494323569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7114daf0b79efdd49a90f74889998af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &494323571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494323569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 631.72614, y: 514.79333, z: -53.034657}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792467043
 GameObject:
@@ -343,12 +386,56 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
-      propertyPath: NetworkConfig.RegisteredScenes.Array.size
+      propertyPath: NetworkConfig.ForceSamePrefabs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.PlayerPrefabHash
+      value: Unity.Multiplayer.MLAPI.Runtime MLAPI.Configuration.NullableBoolSerializable
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.RecycleNetworkIds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.ConnectionApproval
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.CreatePlayerPrefab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.PlayerPrefabHash.Value
+      value: 12816768390216975912
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.AllowRuntimeSceneChanges
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.RegisteredScenes.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.data[0]
       value: Startup
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.RegisteredScenes.Array.data[1]
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[0].Prefab
+      value: 
+      objectReference: {fileID: 2943891891021508573, guid: e0b6b6ca973278e4db82eae315f4ac63, type: 3}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[0].PlayerPrefab
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574245798583509452, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: m_RootOrder

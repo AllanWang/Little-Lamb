@@ -94,7 +94,7 @@ namespace LittleLamb.Server
         // TODO remove char selection?
         //The "BossRoom" server always advances to CharSelect immediately on start. Different games
         //may do this differently.
-        NetworkSceneManager.SwitchScene("CharSelect");
+        NetworkSceneManager.SwitchScene("GameRoom");
 
         if (portal.NetManager.IsHost)
         {

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAPI;
 
 namespace LittleLamb.Player
 {
-  public class Player : MonoBehaviour
+  public class Player : NetworkBehaviour
   {
+
     private Animator anim;
 
     private CharacterController controller;
