@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.data[0]
@@ -428,6 +428,10 @@ PrefabInstance:
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.data[1]
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.RegisteredScenes.Array.data[2]
+      value: GameRoom
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[0].Prefab
