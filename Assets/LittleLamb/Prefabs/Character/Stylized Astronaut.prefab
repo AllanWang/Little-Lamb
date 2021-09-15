@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1427743780720040528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906144598683190547}
+  m_Layer: 0
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1906144598683190547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427743780720040528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.101, z: 0.052}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2941404196733893667}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2943152748209566559
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +448,7 @@ GameObject:
   - component: {fileID: 2993884574283407401}
   - component: {fileID: 2964377377634013049}
   - component: {fileID: 7426940822347820362}
+  - component: {fileID: 1791821466551912000}
   m_Layer: 0
   m_Name: Stylized Astronaut
   m_TagString: Untagged
@@ -438,6 +469,7 @@ Transform:
   m_Children:
   - {fileID: 2940368943099170663}
   - {fileID: 2940435888421885589}
+  - {fileID: 1906144598683190547}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -513,6 +545,20 @@ MonoBehaviour:
   turnSpeed: 400
   gravity: 20
   hangTime: 10
+--- !u!114 &1791821466551912000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943891891021508573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7169dfab36619418d8ceb311ada081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletTrail: {fileID: 3725668356437241777, guid: 2210f61bd6d22a04bbb50f3ba2132ebc, type: 3}
+  gunBarrel: {fileID: 1906144598683190547}
 --- !u!1 &2943893806615663773
 GameObject:
   m_ObjectHideFlags: 0
