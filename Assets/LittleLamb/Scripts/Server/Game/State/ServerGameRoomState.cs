@@ -188,6 +188,7 @@ namespace LittleLamb.Server
             // netState.Name = playerName;
 
             // spawn players characters with destroyWithScene = true
+            Debug.Log($"Spawning player {clientId}");
             newPlayer.SpawnAsPlayerObject(clientId, null, true);
         }
 
