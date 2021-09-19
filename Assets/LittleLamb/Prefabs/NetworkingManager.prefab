@@ -123,7 +123,8 @@ MonoBehaviour:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 801728589883787011}
     RegisteredScenes:
-    - Preloader
+    - MainMenu
+    - GameRoom
     - Startup
     AllowRuntimeSceneChanges: 0
     NetworkPrefabs: []

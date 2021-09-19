@@ -5,6 +5,7 @@ using MLAPI;
 
 namespace LittleLamb.Player
 {
+  [RequireComponent(typeof(CharacterController))]
   public class Player : NetworkBehaviour
   {
 
@@ -48,6 +49,7 @@ namespace LittleLamb.Player
 
     void Update()
     {
+      if (!IsLocalPlayer) return;
       AimTowardsMouse();
       CheckJump();
       Move();

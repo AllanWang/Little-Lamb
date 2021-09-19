@@ -8,21 +8,21 @@ using UnityEngine;
 namespace LittleLamb
 {
 
-   public enum ConnectStatus
-    {
-        Undefined,
-        Success,                  //client successfully connected. This may also be a successful reconnect.
-        ServerFull,               //can't join, server is already at capacity.
-        LoggedInAgain,            //logged in on a separate client, causing this one to be kicked out.
-        UserRequestedDisconnect,  //Intentional Disconnect triggered by the user. 
-        GenericDisconnect,        //server disconnected, but no specific reason given.
-    }
+  public enum ConnectStatus
+  {
+    Undefined,
+    Success,                  //client successfully connected. This may also be a successful reconnect.
+    ServerFull,               //can't join, server is already at capacity.
+    LoggedInAgain,            //logged in on a separate client, causing this one to be kicked out.
+    UserRequestedDisconnect,  //Intentional Disconnect triggered by the user. 
+    GenericDisconnect,        //server disconnected, but no specific reason given.
+  }
 
-    public enum OnlineMode
-    {
-        IpHost = 0, // The server is hosted directly and clients can join by ip address.
-        Relay = 1, // The server is hosted over a relay server and clients join by entering a room name.
-    }
+  public enum OnlineMode
+  {
+    IpHost = 0, // The server is hosted directly and clients can join by ip address.
+    Relay = 1, // The server is hosted over a relay server and clients join by entering a room name.
+  }
 
   [Serializable]
   public class ConnectionPayload
@@ -36,6 +36,7 @@ namespace LittleLamb
   /// <summary>
   /// General purpose entry-point for game network messages between the client and server.
   /// </summary>
+  [DefaultExecutionOrder(-1)] // For some reason, I need this whereas the default BossRoom does not. This must load before client and server net portals
   public class GameNetPortal : MonoBehaviour
   {
 
@@ -65,6 +66,7 @@ namespace LittleLamb
     {
       DontDestroyOnLoad(gameObject);
       NetManager = NetworkManagerGO.GetComponent<NetworkManager>();
+      Debug.Log("Set up Net Manager");
 
       //we synthesize a "NetworkStart" event for the NetworkManager out of existing events. At some point
       //we expect NetworkManager will expose an event like this itself.
@@ -194,7 +196,8 @@ namespace LittleLamb
           throw new Exception($"unhandled IpHost transport {chosenTransport.GetType()}");
       }
 
-      NetManager.StartHost();
+      // TODO check
+      NetManager.StartHost(new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void StartRelayHost(string roomName)

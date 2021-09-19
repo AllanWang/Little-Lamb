@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NetworkManagerGO: {fileID: 1360195598}
-  PlayerName: TestPlayer
+  PlayerName: Abc
 --- !u!4 &370139662
 Transform:
   m_ObjectHideFlags: 0
@@ -387,7 +387,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.ForceSamePrefabs
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.PlayerPrefabHash
@@ -395,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RecycleNetworkIds
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.ConnectionApproval
@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.CreatePlayerPrefab
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.PlayerPrefabHash.Value

@@ -24,6 +24,7 @@ namespace LittleLamb.Server
   /// <summary>
   /// Server logic plugin for the GameNetHub. Contains implementations for all GameNetHub's C2S RPCs.
   /// </summary>
+  [RequireComponent(typeof(GameNetPortal))]
   public class ServerGameNetPortal : MonoBehaviour
   {
     private GameNetPortal portal;
@@ -54,6 +55,7 @@ namespace LittleLamb.Server
     void Start()
     {
       portal = GetComponent<GameNetPortal>();
+      Debug.Log($"Set portal {portal != null} {portal.NetManager != null}");
       portal.NetworkReadied += OnNetworkReady;
 
       // we add ApprovalCheck callback BEFORE NetworkStart to avoid spurious MLAPI warning:

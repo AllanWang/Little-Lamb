@@ -444,11 +444,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2941404196733893667}
-  - component: {fileID: 1166189948380915886}
   - component: {fileID: 2993884574283407401}
   - component: {fileID: 2964377377634013049}
   - component: {fileID: 7426940822347820362}
   - component: {fileID: 1791821466551912000}
+  - component: {fileID: 1166189948380915886}
+  - component: {fileID: 1546038106450403921}
   m_Layer: 0
   m_Name: Stylized Astronaut
   m_TagString: Untagged
@@ -473,23 +474,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1166189948380915886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2943891891021508573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NetworkInstanceId: 0
-  PrefabHash: 12816768390216975912
-  PrefabHashGenerator: Stylized Astronaut
-  AlwaysReplicateAsRoot: 0
-  DontDestroyWithOwner: 0
 --- !u!95 &2993884574283407401
 Animator:
   serializedVersion: 3
@@ -559,6 +543,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTrail: {fileID: 3725668356437241777, guid: 2210f61bd6d22a04bbb50f3ba2132ebc, type: 3}
   gunBarrel: {fileID: 1906144598683190547}
+--- !u!114 &1166189948380915886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943891891021508573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NetworkInstanceId: 0
+  PrefabHash: 12816768390216975912
+  PrefabHashGenerator: Stylized Astronaut
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+--- !u!114 &1546038106450403921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943891891021508573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FixedSendsPerSecond: 20
+  AssumeSyncedSends: 1
+  InterpolatePosition: 1
+  SnapDistance: 10
+  InterpolateServer: 1
+  MinMeters: 0.15
+  MinDegrees: 1.5
+  ExtrapolatePosition: 0
+  MaxSendsToExtrapolate: 5
+  Channel: 
+  EnableRange: 0
+  EnableNonProvokedResendChecks: 0
+  DistanceSendrate:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 500
+      value: 20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2943893806615663773
 GameObject:
   m_ObjectHideFlags: 0
