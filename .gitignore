@@ -2,8 +2,8 @@
 
 # Private assets
 
-[Aa]ssets/
-![Aa]ssets/LittleLamb
+[Aa]ssets/*
+![Aa]ssets/LittleLamb/
 ![Aa]ssets/*.meta
 
 
