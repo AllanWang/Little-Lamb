@@ -8,21 +8,21 @@ using UnityEngine;
 namespace LittleLamb
 {
 
-   public enum ConnectStatus
-    {
-        Undefined,
-        Success,                  //client successfully connected. This may also be a successful reconnect.
-        ServerFull,               //can't join, server is already at capacity.
-        LoggedInAgain,            //logged in on a separate client, causing this one to be kicked out.
-        UserRequestedDisconnect,  //Intentional Disconnect triggered by the user. 
-        GenericDisconnect,        //server disconnected, but no specific reason given.
-    }
+  public enum ConnectStatus
+  {
+    Undefined,
+    Success,                  //client successfully connected. This may also be a successful reconnect.
+    ServerFull,               //can't join, server is already at capacity.
+    LoggedInAgain,            //logged in on a separate client, causing this one to be kicked out.
+    UserRequestedDisconnect,  //Intentional Disconnect triggered by the user. 
+    GenericDisconnect,        //server disconnected, but no specific reason given.
+  }
 
-    public enum OnlineMode
-    {
-        IpHost = 0, // The server is hosted directly and clients can join by ip address.
-        Relay = 1, // The server is hosted over a relay server and clients join by entering a room name.
-    }
+  public enum OnlineMode
+  {
+    IpHost = 0, // The server is hosted directly and clients can join by ip address.
+    Relay = 1, // The server is hosted over a relay server and clients join by entering a room name.
+  }
 
   [Serializable]
   public class ConnectionPayload
