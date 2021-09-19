@@ -66,7 +66,6 @@ namespace LittleLamb
     {
       DontDestroyOnLoad(gameObject);
       NetManager = NetworkManagerGO.GetComponent<NetworkManager>();
-      Debug.Log("Set up Net Manager");
 
       //we synthesize a "NetworkStart" event for the NetworkManager out of existing events. At some point
       //we expect NetworkManager will expose an event like this itself.
@@ -197,7 +196,7 @@ namespace LittleLamb
       }
 
       // TODO check
-      NetManager.StartHost(new Vector3(0, 0, 0), Quaternion.identity);
+      NetManager.StartHost();
     }
 
     public void StartRelayHost(string roomName)

@@ -55,7 +55,6 @@ namespace LittleLamb.Server
     void Start()
     {
       portal = GetComponent<GameNetPortal>();
-      Debug.Log($"Set portal {portal != null} {portal.NetManager != null}");
       portal.NetworkReadied += OnNetworkReady;
 
       // we add ApprovalCheck callback BEFORE NetworkStart to avoid spurious MLAPI warning:
