@@ -2,9 +2,9 @@
 
 # Private assets
 
-[Aa]ssets/TextMesh*Pro/
-[Aa]ssets/Photon/Resources/PhotonAppSettings.asset
-[Aa]ssets/Stylized*Astronaut
+[Aa]ssets/
+![Aa]ssets/LittleLamb
+![Aa]ssets/*/*.meta
 
 
 # This .gitignore file should be placed at the root of your Unity project directory
