@@ -1,7 +1,10 @@
+*.log
+
 # Private assets
 
-# TextMesh Pro files
 [Aa]ssets/TextMesh*Pro/
+[Aa]ssets/Photon/Resources/PhotonAppSettings.asset
+[Aa]ssets/Stylized*Astronaut
 
 
 # This .gitignore file should be placed at the root of your Unity project directory
@@ -65,5 +68,3 @@ sysinfo.txt
 crashlytics-build.properties
 
 stdout.log
-
-[Aa]ssets/Photon/Resources/PhotonAppSettings.asset
