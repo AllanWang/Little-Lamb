@@ -6,6 +6,7 @@ namespace LittleLamb
   public enum GameState
   {
     MainMenu,
+    Lobby,
     GameRoom,
     PostGame
   }

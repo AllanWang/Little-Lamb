@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9039560160717957889, guid: 57f7aa720acb5f44fb20891fdf19f1c1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9039560160717957889, guid: 57f7aa720acb5f44fb20891fdf19f1c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,8 +293,65 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &652389022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 366436916882535591, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_Name
+      value: GameDataSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766666812153893125, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1c5299c35861a14183421b3c919a3c6, type: 3}
 --- !u!1 &792467043
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +444,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.ForceSamePrefabs
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.PlayerPrefabHash
@@ -395,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RecycleNetworkIds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.ConnectionApproval
@@ -403,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.CreatePlayerPrefab
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.PlayerPrefabHash.Value
@@ -419,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.data[0]
@@ -431,6 +488,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
       propertyPath: NetworkConfig.RegisteredScenes.Array.data[2]
+      value: Lobby
+      objectReference: {fileID: 0}
+    - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}
+      propertyPath: NetworkConfig.RegisteredScenes.Array.data[3]
       value: GameRoom
       objectReference: {fileID: 0}
     - target: {fileID: 235690371856989507, guid: 2892228fc58ff144496e3e39ada3dabf, type: 3}

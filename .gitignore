@@ -1,3 +1,12 @@
+*.log
+
+# Private assets
+
+[Aa]ssets/*
+![Aa]ssets/LittleLamb/
+![Aa]ssets/*.meta
+
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
@@ -59,5 +68,3 @@ sysinfo.txt
 crashlytics-build.properties
 
 stdout.log
-
-[Aa]ssets/Photon/Resources/PhotonAppSettings.asset

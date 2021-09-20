@@ -55,7 +55,6 @@ namespace LittleLamb.Server
     void Start()
     {
       portal = GetComponent<GameNetPortal>();
-      Debug.Log($"Set portal {portal != null} {portal.NetManager != null}");
       portal.NetworkReadied += OnNetworkReady;
 
       // we add ApprovalCheck callback BEFORE NetworkStart to avoid spurious MLAPI warning:
@@ -96,7 +95,7 @@ namespace LittleLamb.Server
         // TODO remove char selection?
         //The "BossRoom" server always advances to CharSelect immediately on start. Different games
         //may do this differently.
-        NetworkSceneManager.SwitchScene("GameRoom");
+        NetworkSceneManager.SwitchScene("Lobby");
 
         if (portal.NetManager.IsHost)
         {
