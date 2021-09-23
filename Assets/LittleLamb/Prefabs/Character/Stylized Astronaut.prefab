@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 3492822229890484166}
   - component: {fileID: 1166189948380915886}
   - component: {fileID: 1546038106450403921}
+  - component: {fileID: -5395137831692768282}
   m_Layer: 0
   m_Name: Stylized Astronaut
   m_TagString: Untagged
@@ -622,6 +623,21 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5395137831692768282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943891891021508573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SendRate: 0.1
+  m_Animator: {fileID: 2993884574283407401}
+  m_TrackedParamFlags: 7
 --- !u!1 &2943893806615663773
 GameObject:
   m_ObjectHideFlags: 0
