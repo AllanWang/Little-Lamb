@@ -36,12 +36,12 @@ namespace LittleLamb.Player
     {
       if (Physics.Raycast(gunBarrel.position, gunBarrel.forward, out RaycastHit hit, 200f))
       {
-        var enemyHealth = hit.transform.GetComponent<PlayerHealth>();
-        if (enemyHealth != null)
-        {
-          // Hit player
-          enemyHealth.TakeDamage(10);
-        }
+        // var enemyHealth = hit.transform.GetComponent<PlayerHealth>();
+        // if (enemyHealth != null)
+        // {
+        //   // Hit player
+        //   enemyHealth.TakeDamage(10);
+        // }
       }
       ShootClientRpc();
     }
