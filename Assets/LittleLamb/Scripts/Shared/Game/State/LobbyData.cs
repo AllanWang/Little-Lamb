@@ -98,21 +98,7 @@ namespace LittleLamb
       OnFatalLobbyError?.Invoke(error);
     }
 
-    /// <summary>
-    /// Server notification when a client requests a different lobby-seat, or locks in their seat choice
-    /// </summary>
-    public event Action<ulong> OnClientChangedSeat;
-
     public event Action OnCloseLobby;
-
-    /// <summary>
-    /// RPC to notify the server that a client has chosen a seat.
-    /// </summary>
-    [ServerRpc(RequireOwnership = false)]
-    public void ChangeSeatServerRpc(ulong clientId)
-    {
-      OnClientChangedSeat?.Invoke(clientId);
-    }
 
     [ServerRpc]
     public void CloseLobbyServerRpc()

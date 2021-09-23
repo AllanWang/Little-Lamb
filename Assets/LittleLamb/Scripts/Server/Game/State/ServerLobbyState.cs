@@ -22,30 +22,6 @@ namespace LittleLamb.Server
       m_ServerNetPortal = GameObject.FindGameObjectWithTag("GameNetPortal").GetComponent<ServerGameNetPortal>();
     }
 
-    private void OnClientChangedSeat(ulong clientId)
-    {
-      int idx = FindLobbyPlayerIdx(clientId);
-      if (idx == -1)
-      {
-        //TODO-FIXME:MLAPI See note about MLAPI issue 745 in WaitToSeatNowPlayer.
-        //while this workaround is in place, we must simply ignore these update requests from the client.
-        //throw new System.Exception($"OnClientChangedSeat: client ID {clientId} is not a lobby player and cannot change seats!");
-        return;
-      }
-
-
-      if (LobbyData.IsLobbyClosed.Value)
-      {
-        // The user tried to change their class after everything was locked in... too late! Discard this choice
-        return;
-      }
-
-      LobbyData.LobbyPlayers[idx] = new LobbyData.LobbyPlayerState(clientId,
-          LobbyData.LobbyPlayers[idx].PlayerName,
-          LobbyData.LobbyPlayers[idx].PlayerNum,
-          Time.time);
-    }
-
     /// <summary>
     /// Returns the index of a client in the master LobbyPlayer list, or -1 if not found
     /// </summary>
@@ -87,7 +63,7 @@ namespace LittleLamb.Server
 
     private IEnumerator WaitToEndLobby()
     {
-      yield return new WaitForSeconds(3);
+      yield return new WaitForSeconds(1); // was 3
       MLAPI.SceneManagement.NetworkSceneManager.SwitchScene("GameRoom");
     }
 
@@ -101,7 +77,6 @@ namespace LittleLamb.Server
       }
       if (LobbyData)
       {
-        LobbyData.OnClientChangedSeat -= OnClientChangedSeat;
         LobbyData.OnCloseLobby -= OnCloseLobby;
       }
     }
@@ -117,7 +92,6 @@ namespace LittleLamb.Server
       {
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
-        LobbyData.OnClientChangedSeat += OnClientChangedSeat;
         LobbyData.OnCloseLobby += OnCloseLobby;
 
         if (IsHost)
@@ -145,7 +119,8 @@ namespace LittleLamb.Server
       //causing the NetworkList of lobby players to get out of sync.
       //tracking MLAPI issue: https://github.com/Unity-Technologies/com.unity.multiplayer.mlapi/issues/745
       //When issue is resolved, we should be able to call SeatNewPlayer directly in the client connection callback. 
-      yield return new WaitForSeconds(2.5f);
+      // yield return new WaitForSeconds(2.5f);
+      yield return new WaitForSeconds(0); // was 2.5f
       SeatNewPlayer(clientId);
     }
 

@@ -64,8 +64,6 @@ namespace LittleLamb.Client
     protected override void Start()
     {
       base.Start();
-      // Not clicked; we join immediately and are ready
-      OnPlayerClickedSeat();
       startButton.gameObject.SetActive(IsHost);
     }
 
@@ -122,15 +120,6 @@ namespace LittleLamb.Client
     private void OnFatalLobbyError(LobbyData.FatalLobbyError error)
     {
       Debug.Log($"Lobby error {nameof(error)}");
-    }
-
-    /// <summary>
-    /// Called directly by UI elements!
-    /// </summary>
-    /// <param name="seatIdx"></param>
-    public void OnPlayerClickedSeat()
-    {
-      LobbyData.ChangeSeatServerRpc(NetworkManager.Singleton.LocalClientId);
     }
 
     /// <summary>
